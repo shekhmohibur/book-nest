@@ -3,7 +3,6 @@ import Books from "../books/Books";
 import Hero from "../hero/Hero";
 const Home = () => {
     const allBooks = useLoaderData();
-    console.log(allBooks)
     return (
         <div>
             <Hero></Hero>
