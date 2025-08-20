@@ -1,23 +1,29 @@
-const Book = () => {
+import { FaRegStar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+const Book = ({ book }) => {
+    const { author, bookId, bookName, category, image, publisher, rating, tags } = book;
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
-            <figure>
-                <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
-            </figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    Card Title
-                    <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+        <>
+            <Link>
+                <div className="card bg-base-100 w-96 shadow-sm border">
+                    <figure className="bg-base-300 py-10">
+                        <img
+                            className="h-[184px]"
+                            src={image}
+                            alt={bookName} />
+                    </figure>
+                    <div className="card-body">
+                        <h2 className="card-title text-2xl font-[PlayfairDisplay]">{bookName}</h2>
+                        <p className="text-base">By: {publisher}</p>
+                        <hr className="border-dashed border-t-2 border-b-0 border-gray-300" />
+                        <div className="card-actions justify-between">
+                            <div className="badge text-base">{category}</div>
+                            <div className="flex items-center gap-2 ">{rating}<FaRegStar /></div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </Link>
+        </>
     );
 };
 
