@@ -20,7 +20,7 @@ const Navbar = () => {
                         <NavLink to={'/pagesToRead'} className="text-lg px-3 py-2 hover:text-[#23BE0A]">{link3}</NavLink>
                     </div>
                 </div>
-                <Link to={'/'} className="text-lg md:text-xl">BookNest</Link>
+                <Link to={'/'} className="text-lg font-semibold md:text-xl">BookNest</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
